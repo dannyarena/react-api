@@ -16,6 +16,18 @@ useEffect (() => {
   return (
    <div>
     <h1>Lista di attori</h1>
+    
+    {/* creiamo le card dinamiche con il .map */}
+    {persone.map(p => (
+      <div className='card'>
+        <img src={p.image} alt={p.name} />
+        <h2>{p.name}</h2>
+        <p>{p.birth_year}</p>
+        <p>{p.nationality}</p>
+        <p>{p.bio}</p>
+        <p>{p.awards}</p>
+      </div>
+    ))}
    </div>
   )
 }
